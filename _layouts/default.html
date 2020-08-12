@@ -4,6 +4,7 @@
         <title>Test Page: Don't Panic</title>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/main.css">
     </head>
@@ -13,5 +14,9 @@
           {{ content }}
         </div>
       {% include footer.html %}
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
     </body>
 </html>
