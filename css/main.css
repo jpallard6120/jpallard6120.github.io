@@ -214,6 +214,14 @@ p {
   color: var(--medium-color);
 }
 
+.offset-left {
+  margin: 2vw 20vw 2vw 10vw;
+}
+
+.offset-right {
+  margin: 2vw 10vw 2vw 20vw;
+}
+
 .service-headline {
   position: relative;
   height: 4rem;

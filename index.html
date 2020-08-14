@@ -61,7 +61,7 @@ layout: default
     </div>
 </div>
 <div class="services">
-    <div class="services-box" data-aos="fade-up">
+    <div class="services-box offset-left" data-aos="fade-left">
         <div class="service-headline">
             <img src="static/icons/Asset 12.svg">
             <h2>Marketing</h2>
@@ -70,7 +70,7 @@ layout: default
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
     </div>
-    <div class="services-box" data-aos="fade-up">
+    <div class="services-box offset-right" data-aos="fade-right">
         <div class="service-headline">
             <img src="static/icons/Asset 2.svg">
             <h2>E-commerce</h2>
@@ -79,7 +79,7 @@ layout: default
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
     </div>
-    <div class="services-box" data-aos="fade-up">
+    <div class="services-box offset-left" data-aos="fade-left">
         <div class="service-headline">
             <img src="static/icons/Asset 14.svg">
             <h2>Analytics</h2>
@@ -88,4 +88,15 @@ layout: default
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
         <p>Aenean ornare mauris aliquet tortor fringilla consequat. Integer scelerisque arcu vitae tellus iaculis gravida. Donec erat ex, placerat sed turpis quis, faucibus ullamcorper mi. Nam augue sem, hendrerit sed augue sit amet, tincidunt ornare urna. Nam vehicula urna ornare, fringilla lacus eu, euismod tortor. Donec nec pharetra dolor. Donec eget interdum ipsum, sit amet convallis lacus. Aliquam id arcu et tellus iaculis auctor. Vestibulum eu metus elit. Aliquam ut quam id ligula faucibus aliquet. Integer quis lorem pellentesque, bibendum libero id, fringilla turpis.</p>
     </div>
+</div>
+<div class="blog-excerpts">
+    {{ site.posts.size }}
+    {{ site.posts | inspect }}
+    {% for post in site.posts limit:3 %}
+    <div class="excerpt">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <!-- <span>Posted: {{ post.date | date: '%B %d, %Y' }}</span>
+        <span>{{ post.content | markdownify | strip_html | truncatewords: 50 }}</span> -->
+    </div>
+    {% endfor %}
 </div>
